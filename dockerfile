@@ -8,6 +8,8 @@ LABEL about="An example docker image for Invoiceninja"
 # SYSTEM REQUIREMENT
 ##### 
 
-RUN apt-get update \
-    && 
-
+RUN apt-get update && apt-get install -y \
+  curl \
+  ngnix \
+  mariadb-server \
+  mariadb-client
