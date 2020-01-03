@@ -1,7 +1,7 @@
 #### THIS FILE IS WORK IN PROGRESS. DON't USE IT YET.
 FROM ubuntu:latest
 
-LABEL maintainer="Ravi Gupta <bhooraj.com>"
+LABEL maintainer="Altback <altback.com>"
 LABEL about="An example docker image for Invoiceninja"
 
 #####
@@ -9,7 +9,25 @@ LABEL about="An example docker image for Invoiceninja"
 ##### 
 
 RUN apt-get update && apt-get install -y \
-  curl \
-  ngnix \
-  mariadb-server \
-  mariadb-client
+    curl \
+    ngnix \
+    softawre-properties-common
+ && add-apt-repository ppa:ondrej/php
+ 
+ 
+ RUN apt-get update && apt-get install -y \
+     php7.2-fpm \
+     php7.2-common \
+     php7.2-gmp \
+     php7.2-curl \
+     php7.2-intl \
+     php7.2-mbstring \
+     php7.2-xmlrpc \
+     php7.2-mysql \
+     php7.2-gd \
+     php7.2-xml \
+     php7.2-cli \
+     php7.2-zip
+     
+     
+ 
